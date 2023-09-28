@@ -1,0 +1,46 @@
+{% load static %}
+{% comment %} <footer>
+  <article>
+    <img src="{% static 'img/logo.jpg' %}" alt="footer" width="300px" height="300px"/>
+  </article>
+  <article>
+    <p>Bobs Kiosk Webapp</p> 
+  </article> {% endcomment %}
+
+  <!--FONT AWESOME-->
+
+
+<!--GOOGLE FONTS-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+      <style>
+        footer .links-footer{
+          display:flex;
+          align-items:center;
+          gap:10px;
+          list-style: none;
+        }
+        p{
+          font-size:15px;
+        }
+        footer .links-footer a{
+          text-decoration:none;
+          color:#333333;
+        }
+      </style>
+      <footer class="container text-bg-secondary fixed-bottom p-2">
+        <div class="row">
+          <div class="col-md-6">
+            <p> Bobs Kiosk Copyright © 2023 Bobs - All rights reserved || Designed By: Group 1</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="links-footer">
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Career</a></li>
+              </ul>
+          </div>
+        </div>
+    </footer>
