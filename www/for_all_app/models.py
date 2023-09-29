@@ -7,6 +7,7 @@ class Products(models.Model):
     quantity = models.IntegerField()
     description = models.TextField(max_length=1000)
     category = models.CharField(default="Uncategorized", max_length=50)
+    image = models.ImageField(upload_to="for_all_app/static/img", null=True)
     
     def __str__(self):
         return self.title

@@ -15,9 +15,9 @@ from .models import Products
 def Home(request):
     
     products = Products.objects.all()
-    print(products)
+   
     searchQuiry = request.GET.get("search")
-    print(request.method)
+
     if searchQuiry:
         found = Products.objects.get(title=searchQuiry)
         if found:

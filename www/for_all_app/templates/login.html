@@ -5,9 +5,9 @@
 
 {% block content %}
 
-    <section class="vh-100" style="">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
+    <section class="vh-75 small">
+        <div class="container py-5 h-75">
+          <div class="row d-flex justify-content-center align-items-center h-75">
             <div class="col col-xl-10">
               <div class="card" style="border-radius: 1rem;">
                 <div class="row g-0">
@@ -37,9 +37,14 @@
                           {% comment %} <button class="btn btn-dark btn-lg btn-block" type="button">Login</button> {% endcomment %}
                           <input type="hidden" name="next" value="{% url 'home' %}">
                         </div>
-      
+                           
                         <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="{%url 'signup'%}"
                             style="color: #393f81;">Register here</a></p>
+                      </form>
+                      <form action="{% url 'home' %}">
+                        <div class="pt-1 mb-4">
+                          <button type="" class="btn btn-dark btn-lg btn-block">Continue Without Login</button>
+                        </div>
                       </form>
                     </div>
                   </div>

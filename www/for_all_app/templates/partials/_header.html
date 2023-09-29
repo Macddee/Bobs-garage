@@ -20,9 +20,6 @@
             <a class="nav-link active" aria-current="page" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{% url 'specials' %}">Specials</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{% url 'signup' %}">Sign up</a>
           </li>
         </ul>
@@ -41,25 +38,19 @@
         <form action="{% url 'search' %}" class="d-flex form-banner" role="search" >
           <input class="form-control me-2" type="search" name="query" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
-         
-          
-        
+
         {% if user.is_authenticated %}
             <div >
              <h5 class=" username m-0" role="alert">Hallo, {{user.username}}</h5> 
             </div>
             <div>
               <a href="{% url 'logout' %}" class="alert alert-danger logout" role="alert">Logout</a>
-            
             </div>
-           
         {%else%}
           <div class="alert alert-dark" role="alert">
             <a href="{% url 'login' %}">Login Here</a>
           </div>
-        {% endif %}
-          
-          
+        {% endif %} 
         </form>
       </div>
     </div>
