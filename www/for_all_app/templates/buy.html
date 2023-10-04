@@ -8,8 +8,16 @@
             {% comment %} <img src="" class="justify-content-center" alt="{{product.title}}"> {% endcomment %}
             <div class="card-body">
             <h2 class="text-center">{{product.title}}        ${{product.price}}</h2>
+            <h2 class="text-center">{{product.quantity}} items remaining hurry!</h2>
         <p class="text-center"><h4 class="text-center">{{product.description}}</h4></p>
-        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        <p>
+            <form action= "{% url 'cart' product.id %}" method="GET" class="text-center">'
+                <div class="container">
+                    <input  type="number" name="qty" placeholder="Your quantity">
+                    <button class="btn btn-primary">Add to cart</button>
+                </div>
+            </form>
+        </p>
         </div>
     </div>
 

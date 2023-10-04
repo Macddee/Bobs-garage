@@ -11,5 +11,10 @@ class Products(models.Model):
     
     def __str__(self):
         return self.title
-    
-    
+
+class Temp(models.Model):
+    title = models.CharField(max_length=50)
+    quantity = models.IntegerField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+    current_total = models.IntegerField()
+    order_num = models.IntegerField(null=True)
